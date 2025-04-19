@@ -94,5 +94,27 @@ std::vector<GF> AOfunctions(std::string bfs, int Zval, std::vector<double> pos){
 			orbitals.push_back(O2py);
 			orbitals.push_back(O2pz);
 		}
+		// * N * //
+		else if(Zval==7){
+		// 1s
+		std::vector<double> a1s({99.106169, 18.052312, 4.885660});
+		std::vector<double> d1s({0.1543289673, 0.5353281423, 0.4446345422});
+		GF N1s(a1s, d1s, pos, Ls);
+		orbitals.push_back(N1s);
+		
+		// 2s, 2p
+		std::vector<double> a2sp({3.7804559, 0.8784966, 0.2857144});
+		std::vector<double> d2s ({-0.09996722919, 0.3995128261, 0.7001154689});
+		std::vector<double> d2p ({0.1559162750, 0.6076837186, 0.3919573931});
+		GF N2s (a2sp, d2s, pos, Ls );
+		GF N2px(a2sp, d2p, pos, Lpx);
+		GF N2py(a2sp, d2p, pos, Lpy);
+		GF N2pz(a2sp, d2p, pos, Lpz);
+		orbitals.push_back(N2s );
+		orbitals.push_back(N2px);
+		orbitals.push_back(N2py);
+		orbitals.push_back(N2pz);
+}
+
 	return orbitals;
 }
