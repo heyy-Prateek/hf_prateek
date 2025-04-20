@@ -7,10 +7,10 @@
 #################################
 
 # input file name
-infile="o2.inp"
+infile="NH3.inp"
 
 # calculation method (RHF, UHF)
-method="UHF"
+method="RHF"
 
 # basis set
 basis="STO-3G"
