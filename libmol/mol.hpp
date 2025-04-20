@@ -16,6 +16,7 @@ class Molecule{
 		int charge;
 		int Nelec;
 		int NUPDOWN;
+		int multiplicity;
 		std::string basis;
 		std::vector<std::vector<double>> xyz;
 		std::vector<GF> AOs;

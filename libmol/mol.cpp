@@ -5,7 +5,8 @@ Molecule::Molecule(std::string file, std::string bfs){
 	assert(read.good());
 
 	Nelec = 0;
-	read >> Natoms >> charge >> NUPDOWN;
+	read >> Natoms >> charge >> multiplicity;
+	NUPDOWN = multiplicity-1;
 	Nelec = -charge;
 	Zvals.resize(Natoms);
 	xyz.resize(Natoms);
